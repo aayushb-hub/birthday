@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -59,7 +59,19 @@
 </div>
 </div>
 <script  src="js/index.js"></script>
+<button onclick="startMusic()" style="font-size: 20px; padding: 10px 20px;">🎵 Start</button>
 <audio autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+  function startMusic() {
+    const audio = document.getElementById('bg-music');
+    audio.play();
+  }
+</script>
+
+<audio id="bg-music" loop>
   <source src="song.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
